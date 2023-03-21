@@ -1,13 +1,13 @@
-<?php /* Smarty version 4.3.0, created on 2023-02-03 10:43:23
+<?php /* Smarty version 4.3.0, created on 2023-02-03 07:14:06
          compiled from 'C:\xampp\htdocs\smarty\Learning\config\foo.conf' */ ?>
 <?php
-/* Smarty version 4.3.0, created on 2023-02-03 10:43:23
+/* Smarty version 4.3.0, created on 2023-02-03 07:14:06
   from 'C:\xampp\htdocs\smarty\Learning\config\foo.conf' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63dcd73b02a934_38918982',
+  'unifunc' => 'content_63dca62e069522_70780518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63dcd73b02a934_38918982 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63dca62e069522_70780518 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->configLoad->_loadConfigVars($_smarty_tpl, array (
   'sections' => 
   array (

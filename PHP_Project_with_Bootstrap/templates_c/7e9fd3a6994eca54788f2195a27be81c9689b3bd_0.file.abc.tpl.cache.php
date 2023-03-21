@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-17 00:26:31
+/* Smarty version 4.3.0, created on 2023-02-02 09:52:21
   from 'C:\xampp\htdocs\smarty\Learning\template\abc.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6413a5a75d6334_29194461',
+  'unifunc' => 'content_63db79c51327c2_10053089',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7e9fd3a6994eca54788f2195a27be81c9689b3bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\Learning\\template\\abc.tpl',
-      1 => 1675333859,
+      1 => 1675321812,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6413a5a75d6334_29194461 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '10907646006413a5a6d28ae1_36136037';
+function content_63db79c51327c2_10053089 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '186880458663db79c507d7b0_77256912';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +76,6 @@ $_smarty_tpl->tpl_vars['user']->do_else = false;
         <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        
         <?php $_smarty_tpl->_assignInScope('name', 3);?>
         <?php if ($_smarty_tpl->tpl_vars['name']->value == '1') {?> 
             Name is one
@@ -100,6 +99,8 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['user']->do_else = false;
 ?>
                 <tr>
+                    <td><?php echo $_smarty_tpl->tpl_vars['counter']->value++;?>
+</td>
                     <td><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['user']->value['department'];?>

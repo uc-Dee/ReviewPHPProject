@@ -1,0 +1,105 @@
+/* Designing of the logo */
+#img1 {
+    height: 4rem; 
+    width: 10rem; 
+}
+
+/* Design for the header of every page */
+#nav1 {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    
+  }
+  
+/* styling fot 'Ucertify Test PerpKit' */
+  #p1 {
+      position: absolute;
+      font-size: 2rem;
+      left: 645px;
+      font-family: sans-serif;
+  }
+
+
+#navbar2 {
+    text-align: right;
+}
+
+nav div div {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#hr1 {
+    color: black; 
+    height: 2rem; 
+}
+  
+  /* nav li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  nav li:first-child {
+    margin-left: 0;
+  }
+   */
+
+
+/* Designing of the start button index page*/
+
+/* Formatting for the question */
+#question {
+
+    padding-left: 1rem; 
+    text-align: justify; 
+    justify-content: flex-end;
+}
+
+/* footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-left: 100px;
+        right: 0;
+} */
+
+
+/* <style>
+      #que_exp seq:before {
+        content: attr(no);
+      }
+
+      .listque:hover {
+        color: rgb(213, 1, 1);
+      }
+
+      .circle {
+        margin: 10px;
+        width: 25px;
+        height: 25px;
+        border-radius: 31%;
+        font-size: 17px;
+        line-height: 23px;
+        text-align: center;
+        color: rgb(2, 2, 2);
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding: 5px;
+        text-align: center;
+      }
+    </style> */

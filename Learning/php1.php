@@ -56,5 +56,4 @@ $smarty->assign('user_list', $users);
 
 //Asking smarty to display the values
 $smarty->display("template/bare.tpl"); 
-
 ?>

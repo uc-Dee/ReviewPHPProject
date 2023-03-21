@@ -1,0 +1,42 @@
+/* Designing of the logo */
+#img1 {
+    height: 4rem; 
+    width: 10rem; 
+}
+
+/* Design for the header of every page */
+#nav1 {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    
+  }
+  
+/* styling fot 'Ucertify Test PerpKit' */
+  #p1 {
+      position: absolute;
+      font-size: 2rem;
+      left: 645px;
+      font-family: sans-serif;
+  }
+
+#btn1 {
+    position: absolute;
+    top: 358px;
+    left: 747px;
+}
+
+#hr1 {
+    color: black; 
+    height: 2rem; 
+}
+
+#a1 {
+    text-decoration: none;
+    color: white;
+}

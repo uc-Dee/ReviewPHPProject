@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-02-03 10:43:22
+/* Smarty version 4.3.0, created on 2023-02-03 08:27:49
   from 'C:\xampp\htdocs\smarty\Learning\template\Suryafileclone.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63dcd73ab777a1_97947332',
+  'unifunc' => 'content_63dcb775dcfcc4_17370994',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d16214ba607c17b0793097e94a1b61bbdfc5c04' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\Learning\\template\\Suryafileclone.tpl',
-      1 => 1675417348,
+      1 => 1675409266,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63dcd73ab777a1_97947332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63dcb775dcfcc4_17370994 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'mybooks' => 
   array (
     'compiled_filepath' => 'C:\\xampp\\htdocs\\smarty\\Learning\\templates_c\\1d16214ba607c17b0793097e94a1b61bbdfc5c04_0.file.Suryafileclone.tpl.cache.php',
     'uid' => '1d16214ba607c17b0793097e94a1b61bbdfc5c04',
-    'call_name' => 'smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097',
+    'call_name' => 'smarty_template_function_mybooks_142463742963dcb775c5df76_87031131',
   ),
 ));
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\function.counter.php','function'=>'smarty_function_counter',),1=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),2=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),3=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),4=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.escape.php','function'=>'smarty_modifier_escape',),5=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.spacify.php','function'=>'smarty_modifier_spacify',),6=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),7=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.mb_wordwrap.php','function'=>'smarty_modifier_mb_wordwrap',),));
-$_smarty_tpl->compiled->nocache_hash = '18295939363dcd73aae8b04_61983097';
+$_smarty_tpl->compiled->nocache_hash = '142463742963dcb775c5df76_87031131';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -323,7 +323,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     </div>
 
-        <h3>For Loop</h3>
+    <h3>For Loop</h3>
     <?php
 $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = $_smarty_tpl->tpl_vars['step']->value;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? $_smarty_tpl->tpl_vars['to']->value+1 - ($_smarty_tpl->tpl_vars['start']->value) : $_smarty_tpl->tpl_vars['start']->value-($_smarty_tpl->tpl_vars['to']->value)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
 if ($_smarty_tpl->tpl_vars['i']->total > 0) {
@@ -335,48 +335,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 
 }
 ?>
 
-    <?php $_smarty_tpl->_assignInScope('start', 10);?>
-    <?php $_smarty_tpl->_assignInScope('to', 5);?>
-    <?php $_smarty_tpl->_assignInScope('step', -1);?>
 
-    <h3>Forelse Loop</h3>
-    <ul>
-        <?php
-$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = $_smarty_tpl->tpl_vars['step']->value;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? $_smarty_tpl->tpl_vars['to']->value+1 - ($_smarty_tpl->tpl_vars['start']->value) : $_smarty_tpl->tpl_vars['start']->value-($_smarty_tpl->tpl_vars['to']->value)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
-if ($_smarty_tpl->tpl_vars['i']->total > 0) {
-for ($_smarty_tpl->tpl_vars['i']->value = $_smarty_tpl->tpl_vars['start']->value, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
-$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration === $_smarty_tpl->tpl_vars['i']->total;?>
-            <li><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-</li>
-        <?php }} else { ?>
-            no iteration
-        <?php }
-?>
-    </ul>
-    
-    <h3>Iterator</h3>
-    <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['arr2']->value, 'value');
-$_smarty_tpl->tpl_vars['value']->iteration = 0;
-$_smarty_tpl->tpl_vars['value']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
-$_smarty_tpl->tpl_vars['value']->do_else = false;
-$_smarty_tpl->tpl_vars['value']->iteration++;
-$__foreach_value_1_saved = $_smarty_tpl->tpl_vars['value'];
-?>
-        <?php if (!($_smarty_tpl->tpl_vars['value']->iteration % 4)) {?>
-            <b><?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-</b> <br>
-        <?php }?>
-        <?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-</br>
-    <?php ob_start();
-$_smarty_tpl->tpl_vars['value'] = $__foreach_value_1_saved;
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
-$_prefixVariable1 = ob_get_clean();
-echo $_prefixVariable1;?>
-  
 </body>
 
 <?php echo '<script'; ?>
@@ -388,9 +347,9 @@ echo $_prefixVariable1;?>
 >
 
 </html><?php }
-/* smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097 */
-if (!function_exists('smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097')) {
-function smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_mybooks_142463742963dcb775c5df76_87031131 */
+if (!function_exists('smarty_template_function_mybooks_142463742963dcb775c5df76_87031131')) {
+function smarty_template_function_mybooks_142463742963dcb775c5df76_87031131(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
@@ -406,5 +365,5 @@ $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRende
         </ul>
     <?php
 }}
-/*/ smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097 */
+/*/ smarty_template_function_mybooks_142463742963dcb775c5df76_87031131 */
 }

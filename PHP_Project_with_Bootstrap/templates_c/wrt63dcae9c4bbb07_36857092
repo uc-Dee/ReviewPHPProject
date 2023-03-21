@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-02-03 10:43:22
+/* Smarty version 4.3.0, created on 2023-02-03 07:50:04
   from 'C:\xampp\htdocs\smarty\Learning\template\Suryafileclone.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_63dcd73ab777a1_97947332',
+  'unifunc' => 'content_63dcae9c4b5828_25571470',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1d16214ba607c17b0793097e94a1b61bbdfc5c04' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\Learning\\template\\Suryafileclone.tpl',
-      1 => 1675417348,
+      1 => 1675407002,
       2 => 'file',
     ),
   ),
@@ -20,17 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63dcd73ab777a1_97947332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63dcae9c4b5828_25571470 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'mybooks' => 
   array (
     'compiled_filepath' => 'C:\\xampp\\htdocs\\smarty\\Learning\\templates_c\\1d16214ba607c17b0793097e94a1b61bbdfc5c04_0.file.Suryafileclone.tpl.cache.php',
     'uid' => '1d16214ba607c17b0793097e94a1b61bbdfc5c04',
-    'call_name' => 'smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097',
+    'call_name' => 'smarty_template_function_mybooks_31616008863dcae9c391eb2_34644748',
   ),
 ));
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\function.counter.php','function'=>'smarty_function_counter',),1=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),2=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),3=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),4=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.escape.php','function'=>'smarty_modifier_escape',),5=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.spacify.php','function'=>'smarty_modifier_spacify',),6=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),7=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.mb_wordwrap.php','function'=>'smarty_modifier_mb_wordwrap',),));
-$_smarty_tpl->compiled->nocache_hash = '18295939363dcd73aae8b04_61983097';
+$_smarty_tpl->compiled->nocache_hash = '31616008863dcae9c391eb2_34644748';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,15 +56,14 @@ $_smarty_tpl->compiled->nocache_hash = '18295939363dcd73aae8b04_61983097';
     </div>
 
 
-        </br>
-    <h2>Accessing the data of array in one go</h2></br>
+        </br><h2>Accessing the data of array in one go</h2></br>
     <div class="info"><?php echo json_encode($_smarty_tpl->tpl_vars['arr1']->value);?>
 </div>
 
 
-        </br>
-    <h2>Accessing Array using indexing</h2></br>
-
+     
+    </br><h2>Accessing Array using indexing</h2></br>
+    
     <div class="info">
         <li>User Name: <?php echo $_smarty_tpl->tpl_vars['arr2']->value[0];?>
 </li>
@@ -101,11 +100,11 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
     <h2>Counter Variable</h2>
 
     
-    <div class="info">
+    <div class = "info">
         <?php echo smarty_function_counter(array('start'=>10,'skip'=>20),$_smarty_tpl);?>
 </br>
         <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
- </br>
+ </br> 
         <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
  </br>
         <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
@@ -121,12 +120,12 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
     <?php $_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'mybooks', array(), false);?>
 
 
-        <div class="info">
+        <div class = "info">
         <button onclick="p()">click me</button>
     </div>
 
     <h2>Variable Modifier</h2>
-    <div class="info">
+    <div class = "info">
         <h3>Capitalization</h3>
         <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
 </br>
@@ -137,7 +136,7 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
     </div>
 
     <h2>Lower Case</h2>
-    <div class="info">
+    <div class = "info">
         <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
 </br>
         <?php echo mb_strtolower((string) $_smarty_tpl->tpl_vars['book1']->value, 'UTF-8');?>
@@ -145,13 +144,13 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
     </div>
 
     <h2>Printing the current time</h2>
-    <div class="info">
+    <div class = "info">
         <?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
 
     </div>
 
     <h2>UPPER</h2>
-    <div class="info">
+    <div class = "info">
         <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
 </br>
         <?php echo mb_strtoupper((string) $_smarty_tpl->tpl_vars['book1']->value ?? '', 'UTF-8');?>
@@ -159,25 +158,25 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
     </div>
 
     <h3>Printing the current time</h3>
-    <div class="info">
+    <div class = "info">
         <?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
 
     </div>
 
     <h2>String Concatination</h2>
-    <div class="info">
+    <div class = "info">
         <?php echo ($_smarty_tpl->tpl_vars['book1']->value).(" is my favourite book for operating system");?>
 
     </div>
 
     <h3>Printing the current time</h3>
-    <div class="info">
+    <div class = "info">
         <?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
 
     </div>
 
     <h3>Count Chatacters</h3>
-    <div class="info">
+    <div class = "info">
         <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
 </br>
         <?php echo preg_match_all('/[^\s]/u',$_smarty_tpl->tpl_vars['book1']->value, $tmp);?>
@@ -187,17 +186,17 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
     </div>
 
     <h3>Count Words</h3>
-    <div class="info">
+    <div class = "info">
         <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
 </br>
         <?php echo preg_match_all('/\p{L}[\p{L}\p{Mn}\p{Pd}\'\x{2019}]*/u', $_smarty_tpl->tpl_vars['book1']->value, $tmp);?>
 </br>
         <?php echo preg_match_all('/\p{L}[\p{L}\p{Mn}\p{Pd}\'\x{2019}]*/u', $_smarty_tpl->tpl_vars['book1']->value, $tmp);?>
 </br>
-    </div>
+    </div>    
 
     <h3>Count Chatacters</h3>
-    <div class="info">
+    <div class = "info">
         <?php echo preg_match_all('/[^\s]/u',time(), $tmp);?>
 </br>
         <?php echo mb_strlen((string) time(), 'UTF-8');?>
@@ -238,7 +237,7 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
 
 
     <h3>Escape</h3>
-        <a herf="mailto: <?php echo $_smarty_tpl->tpl_vars['emailaddress']->value;?>
+        <a herf = "mailto: <?php echo $_smarty_tpl->tpl_vars['emailaddress']->value;?>
 "> <?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['emailaddress']->value, 'mail');?>
 </a>
 
@@ -263,7 +262,7 @@ $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo
     <?php echo smarty_modifier_mb_wordwrap($_smarty_tpl->tpl_vars['passage']->value,100,"<br/>",true);?>
  
     <h1 style="Text-align:Center;">Built In Function</h1>
-    <div class="info">
+    <div class = "info">
         <h3>Appending the element to the array</h3>
         <?php $_tmp_array = isset($_smarty_tpl->tpl_vars['arr1']) ? $_smarty_tpl->tpl_vars['arr1']->value : array();
 if (!(is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess)) {
@@ -273,9 +272,8 @@ $_tmp_array["address"] = "meerut";
 $_smarty_tpl->_assignInScope('arr1', $_tmp_array);?>
         <p>Array1 has been updated</p>
         <?php echo json_encode($_smarty_tpl->tpl_vars['arr1']->value);?>
-</br>
 
-        <h3>Data has been replaced with the new value</h3>
+
         <?php $_tmp_array = isset($_smarty_tpl->tpl_vars['arr1']) ? $_smarty_tpl->tpl_vars['arr1']->value : array();
 if (!(is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess)) {
 settype($_tmp_array, 'array');
@@ -284,119 +282,21 @@ $_tmp_array["address"] = "Noida";
 $_smarty_tpl->_assignInScope('arr1', $_tmp_array);?>
         <?php echo json_encode($_smarty_tpl->tpl_vars['arr1']->value);?>
 
-
-         
-
-                <table>
-            <tr>
-                <th>Name</th>
-                <th>Department</th>
-            </tr>
-            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['user_list']->value, 'user');
-$_smarty_tpl->tpl_vars['user']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['user']->key => $_smarty_tpl->tpl_vars['user']->value) {
-$_smarty_tpl->tpl_vars['user']->do_else = false;
-$__foreach_user_0_saved = $_smarty_tpl->tpl_vars['user'];
-?>
-                <tr>
-                    <td><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
-</td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['user']->value['department'];?>
-</td>
-                </tr>
-            <?php
-$_smarty_tpl->tpl_vars['user'] = $__foreach_user_0_saved;
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        </table>
-
-        
-        <?php $_smarty_tpl->_assignInScope('name', 2);?>
-        <?php if ($_smarty_tpl->tpl_vars['name']->value == 1) {?>
-            Smarty is a good language.
-        <?php } elseif ($_smarty_tpl->tpl_vars['name']->value == 2) {?>
-            smarty is an average language.
-        <?php } else { ?>
-            smarty is a bad language.
-        <?php }?>
-
     </div>
 
-        <h3>For Loop</h3>
-    <?php
-$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = $_smarty_tpl->tpl_vars['step']->value;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? $_smarty_tpl->tpl_vars['to']->value+1 - ($_smarty_tpl->tpl_vars['start']->value) : $_smarty_tpl->tpl_vars['start']->value-($_smarty_tpl->tpl_vars['to']->value)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
-if ($_smarty_tpl->tpl_vars['i']->total > 0) {
-for ($_smarty_tpl->tpl_vars['i']->value = $_smarty_tpl->tpl_vars['start']->value, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
-$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration === $_smarty_tpl->tpl_vars['i']->total;?>
-        <li><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-</li>
-    <?php }
-}
-?>
 
-    <?php $_smarty_tpl->_assignInScope('start', 10);?>
-    <?php $_smarty_tpl->_assignInScope('to', 5);?>
-    <?php $_smarty_tpl->_assignInScope('step', -1);?>
-
-    <h3>Forelse Loop</h3>
-    <ul>
-        <?php
-$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = $_smarty_tpl->tpl_vars['step']->value;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? $_smarty_tpl->tpl_vars['to']->value+1 - ($_smarty_tpl->tpl_vars['start']->value) : $_smarty_tpl->tpl_vars['start']->value-($_smarty_tpl->tpl_vars['to']->value)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
-if ($_smarty_tpl->tpl_vars['i']->total > 0) {
-for ($_smarty_tpl->tpl_vars['i']->value = $_smarty_tpl->tpl_vars['start']->value, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
-$_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration === $_smarty_tpl->tpl_vars['i']->total;?>
-            <li><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-</li>
-        <?php }} else { ?>
-            no iteration
-        <?php }
-?>
-    </ul>
-    
-    <h3>Iterator</h3>
-    <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['arr2']->value, 'value');
-$_smarty_tpl->tpl_vars['value']->iteration = 0;
-$_smarty_tpl->tpl_vars['value']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
-$_smarty_tpl->tpl_vars['value']->do_else = false;
-$_smarty_tpl->tpl_vars['value']->iteration++;
-$__foreach_value_1_saved = $_smarty_tpl->tpl_vars['value'];
-?>
-        <?php if (!($_smarty_tpl->tpl_vars['value']->iteration % 4)) {?>
-            <b><?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-</b> <br>
-        <?php }?>
-        <?php echo $_smarty_tpl->tpl_vars['value']->value;?>
-</br>
-    <?php ob_start();
-$_smarty_tpl->tpl_vars['value'] = $__foreach_value_1_saved;
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
-$_prefixVariable1 = ob_get_clean();
-echo $_prefixVariable1;?>
-  
 </body>
 
-<?php echo '<script'; ?>
->
-    function p() {
-        alert("You have clicked the button");
-    }
-<?php echo '</script'; ?>
->
-
 </html><?php }
-/* smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097 */
-if (!function_exists('smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097')) {
-function smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_mybooks_31616008863dcae9c391eb2_34644748 */
+if (!function_exists('smarty_template_function_mybooks_31616008863dcae9c391eb2_34644748')) {
+function smarty_template_function_mybooks_31616008863dcae9c391eb2_34644748(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
 ?>
 
-        <ul class="info">
+        <ul class = "info">
             <li><?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
 </li>
             <li><?php echo $_smarty_tpl->tpl_vars['book2']->value;?>
@@ -406,5 +306,5 @@ $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRende
         </ul>
     <?php
 }}
-/*/ smarty_template_function_mybooks_18295939363dcd73aae8b04_61983097 */
+/*/ smarty_template_function_mybooks_31616008863dcae9c391eb2_34644748 */
 }

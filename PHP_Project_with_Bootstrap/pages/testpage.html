@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test_Page | uCertify</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <nav class="navbar border border-dark navbar-light bg-light" id="nav1">
+        <img src="./img/uCertifyLogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <p id="p1" class="text-center"><b>uCertify Test Prep</b></p>
+        </a>
+
+    </nav>
+
+    {* To display the questions *}
+    <div class="container mt-3" id="question">
+        <p><b>{$question}</p>
+        {foreach from=$answers item=answer key=key}
+            <input type="radio" id="option_{$key}" name="options" value="{$answer['answer']}">
+            <label for="option_{$key}">{$answer['answer']}</label><br>
+        {/foreach}
+
+        <footer class=" fixed-bottom mb-2 ">
+            <div class=" d-flex justify-content-end container mr-2">
+                <button class="btn" id="timer"></button>
+                <button type="button"
+                    class="  btn btn-md-3 btn-outline-primary px-4 slide-toggle me-2 mr-2">List</button>
+                <button type="button" class=" btn btn-md-3 btn-outline-dark  px-3 me-2" id="prev">Previous</button>
+                <button class="btn " id="page"></button>
+                <button type="button" class=" btn btn-md-3 btn-outline-dark px-4 me-2 mr-2" id="next">Next</button>
+                <button type="button" class="end-test btn btn-md-3 btn-danger px-3 me-2" data-bs-toggle="modal"
+                    data-bs-target="#myModal" onclick="">End Test
+                </button>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+</script>
+
+</html>

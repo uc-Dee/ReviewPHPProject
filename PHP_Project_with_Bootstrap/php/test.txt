@@ -1,0 +1,41 @@
+$json = null;
+
+/* 
+// creating an empty json file 
+file_put_contents('../jsonfiles/answers.json', $json);
+
+// creating an array object
+$array = array();
+
+// if we pass an array to json_encode method then it will convert it into a json string
+$json = json_encode($array);
+
+// appending the json strings to an array
+file_put_contents('../jsonfiles/answers.json', $json); */
+
+
+
+// retriving the value of the question number using http post method
+$que = $_POST['questionNo'];
+
+// Retriving the value of the choice using http post method
+$ans = $_POST['choice'];
+
+// Storing the value of the answer.json file in the old variable
+$old = file_get_contents('answer.json');
+
+// Decoding the json file in the form of an array
+$array = json_decode($old);
+
+// First we are matching the data of array in the form of a json file and then we are again converting it in the form of an array
+$array = json_decode(json_encode($array), true);
+
+echo "<br>";
+
+if($ans != -1)
+$array[0][$que] = $ans; 
+$name = "answer";
+$file_name = $name . '.json';
+
+// Putting the  array content in the form of json in $file_name
+file_put_contents("$file_name", json_encode($array));

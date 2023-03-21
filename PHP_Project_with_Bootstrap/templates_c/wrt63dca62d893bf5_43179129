@@ -1,0 +1,269 @@
+<?php
+/* Smarty version 4.3.0, created on 2023-02-03 07:14:05
+  from 'C:\xampp\htdocs\smarty\Learning\template\Suryafileclone.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.0',
+  'unifunc' => 'content_63dca62d834766_77593919',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '1d16214ba607c17b0793097e94a1b61bbdfc5c04' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\smarty\\Learning\\template\\Suryafileclone.tpl',
+      1 => 1675404841,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_63dca62d834766_77593919 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
+  'mybooks' => 
+  array (
+    'compiled_filepath' => 'C:\\xampp\\htdocs\\smarty\\Learning\\templates_c\\1d16214ba607c17b0793097e94a1b61bbdfc5c04_0.file.Suryafileclone.tpl.cache.php',
+    'uid' => '1d16214ba607c17b0793097e94a1b61bbdfc5c04',
+    'call_name' => 'smarty_template_function_mybooks_148255741563dca62ce49dd8_67520485',
+  ),
+));
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\function.counter.php','function'=>'smarty_function_counter',),1=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),2=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),3=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),4=>array('file'=>'C:\\xampp\\htdocs\\smarty\\libs\\plugins\\modifier.escape.php','function'=>'smarty_modifier_escape',),));
+$_smarty_tpl->compiled->nocache_hash = '148255741563dca62ce49dd8_67520485';
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smarty Learning</title>
+</head>
+
+<body>
+
+    
+        <div class="info">
+        <li>User_Name: <?php echo $_smarty_tpl->tpl_vars['arr1']->value['name'];?>
+</li>
+        <li>Email Id: <?php echo $_smarty_tpl->tpl_vars['arr1']->value['email id'];?>
+</li>
+        <li>Mobile Numbers: <?php echo $_smarty_tpl->tpl_vars['arr1']->value['mobile number']['mn1'];?>
+, <?php echo $_smarty_tpl->tpl_vars['arr1']->value['mobile number']['mn2'];?>
+</li>
+    </div>
+
+
+        </br><h2>Accessing the data of array in one go</h2></br>
+    <div class="info"><?php echo json_encode($_smarty_tpl->tpl_vars['arr1']->value);?>
+</div>
+
+
+     
+    </br><h2>Accessing Array using indexing</h2></br>
+    
+    <div class="info">
+        <li>User Name: <?php echo $_smarty_tpl->tpl_vars['arr2']->value[0];?>
+</li>
+        <li>Email Id: <?php echo $_smarty_tpl->tpl_vars['arr2']->value[1];?>
+</li>
+        <li>Phone Number 1: <?php echo $_smarty_tpl->tpl_vars['arr2']->value[2][0];?>
+</li>
+        <li>Phone Number 2: <?php echo $_smarty_tpl->tpl_vars['arr2']->value[2][1];?>
+</li>
+    </div>
+
+    <?php
+$_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, 'config/foo.conf', null, 0);
+?>
+
+
+    
+    
+    <h2>Functions in Smarty</h2>
+        <div class="info">
+        <p>Substring</p>
+
+        
+        <?php $_smarty_tpl->_assignInScope('foo', substr($_smarty_tpl->tpl_vars['name']->value,0,7));?>
+        <?php echo $_smarty_tpl->tpl_vars['foo']->value;?>
+ <br>
+
+        <h2>String length</h2>
+        <?php $_smarty_tpl->_assignInScope('foo', strlen($_smarty_tpl->tpl_vars['name']->value));?>         <?php echo $_smarty_tpl->tpl_vars['foo']->value;?>
+ <br>
+
+    </div>
+
+    <h2>Counter Variable</h2>
+
+    
+    <div class = "info">
+        <?php echo smarty_function_counter(array('start'=>10,'skip'=>20),$_smarty_tpl);?>
+</br>
+        <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
+ </br> 
+        <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
+ </br>
+        <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
+ </br>
+        <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
+ </br>
+    </div>
+
+    <h2>We are now playing with funcitons</h2>
+
+        
+
+    <?php $_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'mybooks', array(), false);?>
+
+
+        <div class = "info">
+        <button onclick="p()">click me</button>
+    </div>
+
+    <h2>Variable Modifier</h2>
+    <div class = "info">
+        <h3>Capitalization</h3>
+        <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
+</br>
+        <?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['book1']->value);?>
+</br>
+        <?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['book1']->value,true);?>
+</br>
+    </div>
+
+    <h2>Lower Case</h2>
+    <div class = "info">
+        <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
+</br>
+        <?php echo mb_strtolower((string) $_smarty_tpl->tpl_vars['book1']->value, 'UTF-8');?>
+
+    </div>
+
+    <h2>Printing the current time</h2>
+    <div class = "info">
+        <?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
+
+    </div>
+
+    <h2>UPPER</h2>
+    <div class = "info">
+        <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
+</br>
+        <?php echo mb_strtoupper((string) $_smarty_tpl->tpl_vars['book1']->value ?? '', 'UTF-8');?>
+
+    </div>
+
+    <h3>Printing the current time</h3>
+    <div class = "info">
+        <?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
+
+    </div>
+
+    <h2>String Concatination</h2>
+    <div class = "info">
+        <?php echo ($_smarty_tpl->tpl_vars['book1']->value).(" is my favourite book for operating system");?>
+
+    </div>
+
+    <h3>Printing the current time</h3>
+    <div class = "info">
+        <?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
+
+    </div>
+
+    <h3>Count Chatacters</h3>
+    <div class = "info">
+        <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
+</br>
+        <?php echo preg_match_all('/[^\s]/u',$_smarty_tpl->tpl_vars['book1']->value, $tmp);?>
+</br>
+        <?php echo mb_strlen((string) $_smarty_tpl->tpl_vars['book1']->value, 'UTF-8');?>
+</br>
+    </div>
+
+    <h3>Count Words</h3>
+    <div class = "info">
+        <?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
+</br>
+        <?php echo preg_match_all('/\p{L}[\p{L}\p{Mn}\p{Pd}\'\x{2019}]*/u', $_smarty_tpl->tpl_vars['book1']->value, $tmp);?>
+</br>
+        <?php echo preg_match_all('/\p{L}[\p{L}\p{Mn}\p{Pd}\'\x{2019}]*/u', $_smarty_tpl->tpl_vars['book1']->value, $tmp);?>
+</br>
+    </div>    
+
+    <h3>Count Chatacters</h3>
+    <div class = "info">
+        <?php echo preg_match_all('/[^\s]/u',time(), $tmp);?>
+</br>
+        <?php echo mb_strlen((string) time(), 'UTF-8');?>
+</br>
+    </div>
+
+    <h3>Count Paragraph</h3>
+    <?php echo $_smarty_tpl->tpl_vars['passage']->value;?>
+
+    <?php echo (preg_match_all('#[\r\n]+#', $_smarty_tpl->tpl_vars['passage']->value, $tmp)+1);?>
+</br>
+    <?php echo (preg_match_all('#[\r\n]+#', $_smarty_tpl->tpl_vars['passage']->value, $tmp)+1);?>
+</br>
+
+    <h3>Count Sentences</h3>
+    <?php echo $_smarty_tpl->tpl_vars['passage']->value;?>
+
+    <?php echo preg_match_all("#\w[\.\?\!](\W|$)#Su", $_smarty_tpl->tpl_vars['passage']->value, $tmp);?>
+</br>
+    <?php echo preg_match_all("#\w[\.\?\!](\W|$)#Su", $_smarty_tpl->tpl_vars['passage']->value, $tmp);?>
+</br>
+
+    <h3>Count Paragraph</h3>
+    <?php echo $_smarty_tpl->tpl_vars['passage']->value;?>
+
+    <?php echo (preg_match_all('#[\r\n]+#', $_smarty_tpl->tpl_vars['passage']->value, $tmp)+1);?>
+</br>
+    <?php echo (preg_match_all('#[\r\n]+#', $_smarty_tpl->tpl_vars['passage']->value, $tmp)+1);?>
+</br>
+
+    <?php echo (($tmp = $_smarty_tpl->tpl_vars['passage']->value ?? null)===null||$tmp==='' ? "Not Available" ?? null : $tmp);?>
+</br>
+    <p>Employee Id: <?php echo (($tmp = $_smarty_tpl->tpl_vars['employeeID']->value ?? null)===null||$tmp==='' ? "Will update soon" ?? null : $tmp);?>
+</p>
+
+    <h3>Replace</h3>
+    <?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['passage']->value,"deeksha","Deeksha");?>
+
+
+    <h3>Escape</h3>
+    <a href="mailto:<?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['EmailAddress']->value, 'hex');?>
+"><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['EmailAddress']->value, 'mail');?>
+</a>
+    <a herf = "mailto: <?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['emailaddress']->value, 'hex');?>
+">{}</a>
+
+
+</body>
+
+</html><?php }
+/* smarty_template_function_mybooks_148255741563dca62ce49dd8_67520485 */
+if (!function_exists('smarty_template_function_mybooks_148255741563dca62ce49dd8_67520485')) {
+function smarty_template_function_mybooks_148255741563dca62ce49dd8_67520485(Smarty_Internal_Template $_smarty_tpl,$params) {
+foreach ($params as $key => $value) {
+$_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
+}
+?>
+
+        <ul class = "info">
+            <li><?php echo $_smarty_tpl->tpl_vars['book1']->value;?>
+</li>
+            <li><?php echo $_smarty_tpl->tpl_vars['book2']->value;?>
+</li>
+            <li><?php echo $_smarty_tpl->tpl_vars['book3']->value;?>
+</li>
+        </ul>
+    <?php
+}}
+/*/ smarty_template_function_mybooks_148255741563dca62ce49dd8_67520485 */
+}
