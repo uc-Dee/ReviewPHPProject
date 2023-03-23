@@ -17,12 +17,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light" id="nav1">
-        <a href='http://localhost/smarty/PHP_Project_with_Bootstrap/Template/'><img src="../img/uCertifyLogo.png" width="30" height="30" class="d-inline-block align-top" alt="uCertify Logo"
-        id='img1'></a>
-        <p id="p1"><b>uCertify Test Prep</b></p>
-    </nav>
-    <hr id="hr1">
+    <div class="my_nav p-2 border-bottom shadow-sm">
+        <div class="row">
+            <div class="col-2">
+                <a href="http://localhost/smarty/PHP_Project_with_Bootstrap/Template/"><img src="uCertifyLogo.png"
+                        class="img1" width="150" height="40" alt=""></a>
+            </div>
+            <div class="col-8">
+                <h2 class="text-center">uCertify Test Prep</h2>
+            </div>
+        </div>
+    </div>
     <!-- Image and text -->
     {$content}
 

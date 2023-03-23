@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-22 13:18:35
+/* Smarty version 4.3.0, created on 2023-03-23 02:22:38
   from 'C:\xampp\htdocs\smarty\PHP_Project_with_Bootstrap\Template\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641af21b8491c2_25311193',
+  'unifunc' => 'content_641ba9de61ca26_97828753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53c1007c6eeb70be9ebca384caa034b4db747456' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\PHP_Project_with_Bootstrap\\Template\\index.tpl',
-      1 => 1679485845,
+      1 => 1679534555,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641af21b8491c2_25311193 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641ba9de61ca26_97828753 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -46,12 +46,17 @@ function content_641af21b8491c2_25311193 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light" id="nav1">
-        <a href='http://localhost/smarty/PHP_Project_with_Bootstrap/Template/'><img src="../img/uCertifyLogo.png" width="30" height="30" class="d-inline-block align-top" alt="uCertify Logo"
-        id='img1'></a>
-        <p id="p1"><b>uCertify Test Prep</b></p>
-    </nav>
-    <hr id="hr1">
+    <div class="my_nav p-2 border-bottom shadow-sm">
+        <div class="row">
+            <div class="col-2">
+                <a href="http://localhost/smarty/PHP_Project_with_Bootstrap/Template/"><img src="uCertifyLogo.png"
+                        class="img1" width="150" height="40" alt=""></a>
+            </div>
+            <div class="col-8">
+                <h2 class="text-center">uCertify Test Prep</h2>
+            </div>
+        </div>
+    </div>
     <!-- Image and text -->
     <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 

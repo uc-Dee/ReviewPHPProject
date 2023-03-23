@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-22 11:58:16
+/* Smarty version 4.3.0, created on 2023-03-23 09:54:10
   from 'C:\xampp\htdocs\smarty\PHP_Project_with_Bootstrap\Template\result.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641adf4855e9e1_99371011',
+  'unifunc' => 'content_641c13b273c154_35543539',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a7c714e1b3f660e4111c756e99fa1940d16614a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\PHP_Project_with_Bootstrap\\Template\\result.tpl',
-      1 => 1679482694,
+      1 => 1679561514,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641adf4855e9e1_99371011 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641c13b273c154_35543539 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
   <div class="container">
-    <div class="container d-flex justify-content-center mt-4 flex-column align-items-center">
+    <div class="container d-flex justify-content-center mt-5 flex-column align-items-center">
       <div class="d-flex mb-3" style="width: 800px">
         <div class="d-flex flex-column align-items-center btn bg-opacity-25 border rounded w-50 mr-2" style="
               background-color: rgb(227, 227, 227) !important;
@@ -121,12 +121,12 @@ $_smarty_tpl->_assignInScope('correct', $_prefixVariable2);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <?php if ($_smarty_tpl->tpl_vars['user_ans']->value[$_smarty_tpl->tpl_vars['val']->value] == $_smarty_tpl->tpl_vars['correct']->value) {?>
-                      <span class="text-success"><b>correct</b></span>
+                      <span class="badge badge-success">correct</span>
                       <?php } else { ?>
-                        <span class="text-danger"><b>Incorrect</b></span>
+                        <span class="badge badge-danger">Incorrect</span>
                     <?php }?>
                   <?php } else { ?>
-                  <span class="text-dark"><b>Unattempted</b></span>
+                  <span class="badge badge-warning">Unattempted</span>
                 <?php }?>
               </span>
             </td>

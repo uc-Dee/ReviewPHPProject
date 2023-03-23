@@ -1,6 +1,6 @@
 
   <div class="container">
-    <div class="container d-flex justify-content-center mt-4 flex-column align-items-center">
+    <div class="container d-flex justify-content-center mt-5 flex-column align-items-center">
       <div class="d-flex mb-3" style="width: 800px">
         <div class="d-flex flex-column align-items-center btn bg-opacity-25 border rounded w-50 mr-2" style="
               background-color: rgb(227, 227, 227) !important;
@@ -69,12 +69,12 @@
                       {/if}
                     {/foreach}
                     {if $user_ans.$val == $correct}
-                      <span class="text-success"><b>correct</b></span>
+                      <span class="badge badge-success">correct</span>
                       {else}
-                        <span class="text-danger"><b>Incorrect</b></span>
+                        <span class="badge badge-danger">Incorrect</span>
                     {/if}
                   {else}
-                  <span class="text-dark"><b>Unattempted</b></span>
+                  <span class="badge badge-warning">Unattempted</span>
                 {/if}
               </span>
             </td>
