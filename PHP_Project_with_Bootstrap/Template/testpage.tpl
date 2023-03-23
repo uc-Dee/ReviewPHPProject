@@ -57,20 +57,23 @@
 
 
 {* modal *}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 <div class="modal fade bd-example-modal-lg" tabindex="-1" id='myModal' role='dialog'>
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">End Test</h5>
+                <h5 class="modal-title">Confimation</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body text-center font-weight-bold" style="font-size:25px">
                 Do you want to end the test?
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Cancel</button>
-                <button type="button" class="btn btn-danger set_session_to_php">End Test</button>
+                <a type="button" class="btn btn-secondary text-light"
+                    href='http://localhost/smarty/PHP_Project_with_Bootstrap/Template/display.php'>Cancel</a>
+                <a type="button" class="btn btn-danger text-light set_session_to_php"
+                    href='http://localhost/smarty/PHP_Project_with_Bootstrap/Template/result.php'>End Test</a>
             </div>
         </div>
     </div>
@@ -78,30 +81,39 @@
 
 {* List Content *}
 {* To display the questions in the list *}
-<div class="container mt-3" id="question">
+<div class="container mt-5" id="question">
     {$HTML}
 </div>
-<div id="local-navbar" class="local-navbar card card-body bg-light p-2" style="position:absolute;top:97px;">
-    {foreach from=$all_ques key=key item=ques_info}
-        <p onclick="changeToQues('{$key}')" class="py-1">
-            <span class="font-weight-nonmal">{$key+1}.</span>
-            {$ques_info['snippet']}
-        </p>
-    {/foreach}
+
+{* To display the questions in snippet *}
+<div id="local-navbar" class="local-navbar card card-body bg-light" style="position:absolute;top:62px;height:1600px">
+    <table>
+        <tbody>
+            <tr>
+                {foreach from=$all_ques key=key item=ques_info}
+                    <p onclick="changeToQues('{$key}')" class="py-1">
+                        <span class="font-weight-bold">{$key+1}.</span>
+                        {$ques_info['snippet']}
+                    </p>
+                    </hr>
+                {/foreach}
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 
 {* To display the buttons *}
-<footer class="fixed-bottom mb-2">
-    <div class=" d-flex justify-content-end container mr-2">
-        <button class="countdown bg-transparent border-0 font-weight-bold" style="margin-right:10px"
-            id='timer'></button>
-        <button type="button" class="  btn btn-md-3 btn-outline-primary px-4 slide-toggle me-2 mr-2"
+<div class="fixed-bottom mb-3">
+    <div class=" d-flex justify-content-end container mr-1">
+        <button class="countdown bg-transparent border-0 font-weight-bold mr-1" id='timer'></button>
+        <button type="button" class="  btn btn-md-3 btn-outline-primary px-4 slide-toggle me-2 mr-1"
             id='list'>List</button>
-        <button type="button" {if $disable_pre}disabled {/if} class="btn btn-md-3 btn-outline-dark pre_btn px-3 me-2"
+        <button type="button" {if $disable_pre}disabled {/if} class="btn btn-md-3 btn-outline-dark pre_btn mr-1"
             id="prev">Previous</button>
-        <div>
-            <span class="no_of_que">1</span>of<span>11</span>
+        <div class='text-center'>
+            <span class="no_of_que font-weight-bold mr-1 ml-3" >1</span>of<span
+                 class='font-weight-bold mr-1 ml-1'>11</span>
         </div>
         <button class="btn " id="page"></button>
         <button type="button" class=" btn btn-md-3 btn-outline-dark px-4 me-2 mr-2" id="next">Next</button>
@@ -109,7 +121,7 @@
             data-target=".bd-example-modal-lg" onclick="">End Test
         </button>
     </div>
-</footer>
+</div>
 
 </div>
 
@@ -136,6 +148,7 @@
         fetchQuestion(ques_no);
         checkedAns(ques_no)
     }
+
     /* Fetching the answers from the session storage */
     function checkedAns(question_no) {
         setTimeout(() => {
@@ -194,7 +207,6 @@
         });
 
         $('#list').click(function() {
-            console.log('YESS');
             $('#local-navbar').toggleClass('show');
         });
 

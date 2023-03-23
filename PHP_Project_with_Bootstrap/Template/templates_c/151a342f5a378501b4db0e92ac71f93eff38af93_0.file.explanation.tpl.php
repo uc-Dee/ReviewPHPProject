@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-23 10:34:07
+/* Smarty version 4.3.0, created on 2023-03-23 18:34:33
   from 'C:\xampp\htdocs\smarty\PHP_Project_with_Bootstrap\Template\explanation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641c1d0f8e4c46_71468638',
+  'unifunc' => 'content_641c8da9dadd79_73462452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '151a342f5a378501b4db0e92ac71f93eff38af93' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\PHP_Project_with_Bootstrap\\Template\\explanation.tpl',
-      1 => 1679564045,
+      1 => 1679564693,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641c1d0f8e4c46_71468638 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641c8da9dadd79_73462452 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 <div class='container mt-5'>
     <div id='displayQuestion'><b><?php echo $_smarty_tpl->tpl_vars['question_num']->value+1;?>
