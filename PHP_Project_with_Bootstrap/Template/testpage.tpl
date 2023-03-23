@@ -55,19 +55,6 @@
     }
 </style>
 
-{* List Content *}
-{* To display the questions in the list *}
-<div class="container mt-3" id="question">
-    {$HTML}
-</div>
-<div id="local-navbar" class="local-navbar card card-body bg-light p-2"
-        style="position:absolute;top:97px;">
-        {foreach from=$all_ques key=key item=ques_info}
-        <h6 onclick="changeToQues('{$key}')" class="py-1"><i class="fa-solid fa-circle-notch"><b>{$key+1}.</b>{$ques_info['snippet']}
-        </h6>
-        {/foreach}
-        
-    </div>
 
 {* modal *}
 <div class="modal fade bd-example-modal-lg" tabindex="-1" id='myModal' role='dialog'>
@@ -83,13 +70,28 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Cancel</button>
-                <a type="button" href="result.php" class="btn btn-danger">End Test</a>
+                <button type="button" class="btn btn-danger set_session_to_php">End Test</button>
             </div>
         </div>
     </div>
 </div>
 
-{* To display the options *}
+{* List Content *}
+{* To display the questions in the list *}
+<div class="container mt-3" id="question">
+    {$HTML}
+</div>
+<div id="local-navbar" class="local-navbar card card-body bg-light p-2" style="position:absolute;top:97px;">
+    {foreach from=$all_ques key=key item=ques_info}
+        <p onclick="changeToQues('{$key}')" class="py-1">
+            <span class="font-weight-nonmal">{$key+1}.</span>
+            {$ques_info['snippet']}
+        </p>
+    {/foreach}
+</div>
+
+
+{* To display the buttons *}
 <footer class="fixed-bottom mb-2">
     <div class=" d-flex justify-content-end container mr-2">
         <button class="countdown bg-transparent border-0 font-weight-bold" style="margin-right:10px"
@@ -114,77 +116,81 @@
 {* Script to fetch the questions *}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
-let attempted_ques = [];
-function fetchQuestion(question_no) {
-            $.ajax({
-                url: "display.php",
-                type: "POST",
-                data: {
-                    question_no: question_no,
-                    func: "get_ques_no"
-                },
-                success: (result) => {
-                    $('#question').html(result)
-                }
-            })
-        }
-function changeToQues (ques_no) {
-    fetchQuestion(ques_no);
-    checkedAns(ques_no)
-}
-/* Fetching the answers from the session storage */
-function checkedAns(question_no) {
-    setTimeout(()=>{
-        const fectch_ans = sessionStorage;
-        const ans = fectch_ans[question_no]
-        let node = $('input[value="' + ans + '"]');
-        node.prop('checked',true)
-    },100)
-}
-// ---------------------------------------------->JavaScript<--------------------------------------------------------
-/* This will fetch the questions */
-function getQueAns (event) {
-    let ques = event.target.getAttribute('que')
-    let ans = event.target.defaultValue
-    sessionStorage.setItem(ques,ans);
-    attempted_ques.push(ques);
-    sessionStorage.setItem('attempted_ques',JSON.stringify(attempted_ques))
-}
+    let attempted_ques = [];
+
+    function fetchQuestion(question_no) {
+        $.ajax({
+            url: "display.php",
+            type: "POST",
+            data: {
+                question_no: question_no,
+                func: "get_ques_no"
+            },
+            success: (result) => {
+                $('#question').html(result)
+            }
+        })
+    }
+
+    function changeToQues(ques_no) {
+        fetchQuestion(ques_no);
+        checkedAns(ques_no)
+    }
+    /* Fetching the answers from the session storage */
+    function checkedAns(question_no) {
+        setTimeout(() => {
+            const fectch_ans = sessionStorage;
+            const ans = fectch_ans[question_no]
+            let node = $('input[value="' + ans + '"]');
+            node.prop('checked', true)
+        }, 100)
+    }
+    // ---------------------------------------------->JavaScript<--------------------------------------------------------
+    /* This will fetch the questions */
+    function getQueAns(event) {
+        let ques = event.target.getAttribute('que')
+        let ans = event.target.defaultValue
+        sessionStorage.setItem(ques, ans);
+        attempted_ques.push(ques);
+        sessionStorage.setItem('attempted_ques', JSON.stringify(attempted_ques))
+    }
 
     let question_no = 0;
     // it means we are writting jquery
     $(document).ready(function() {
-       checkedAns(question_no+1)
+        checkedAns(question_no + 1)
 
-// ---------------------------------------------->JavaScript<--------------------------------------------------------
+        // ---------------------------------------------->JavaScript<--------------------------------------------------------
+
+
         $("#prev").on('click', function() {
             question_no = question_no - 1;
             console.log(question_no)
-            $('.no_of_que').text(question_no+1)
-            if (question_no<10) {
-                $('#next').attr('disabled',false);
-            } 
-            if(question_no == 0) {
-                $('#prev').attr('disabled',true);
+            $('.no_of_que').text(question_no + 1)
+            if (question_no < 10) {
+                $('#next').attr('disabled', false);
+            }
+            if (question_no == 0) {
+                $('#prev').attr('disabled', true);
             }
             fetchQuestion(question_no);
-            checkedAns(question_no+1)
+            checkedAns(question_no + 1)
         });
 
         $("#next").on('click', function() {
             question_no = question_no + 1;
-            console.log(question_no+1)
-            $('.no_of_que').text(question_no+1)
-            if(question_no>0){
-                $('#prev').attr('disabled',false);
+            console.log(question_no + 1)
+            $('.no_of_que').text(question_no + 1)
+            if (question_no > 0) {
+                $('#prev').attr('disabled', false);
             }
 
-            if(question_no == 10) {
-                $('#next').attr('disabled',true);
+            if (question_no == 10) {
+                $('#next').attr('disabled', true);
             }
 
             fetchQuestion(question_no);
-            checkedAns(question_no+1)
+            checkedAns(question_no + 1)
         });
 
         $('#list').click(function() {
@@ -192,9 +198,27 @@ function getQueAns (event) {
             $('#local-navbar').toggleClass('show');
         });
 
+        $('.set_session_to_php').on('click', async function() {
+            try {
+                $.ajax({
+                    url: "display.php",
+                    type: "POST",
+                    data: {
+                        answer_data: JSON.stringify(sessionStorage),
+                        func: "sessionData",
+                    },
+                    success: (result) => {
+                        window.open('result.php', '_self');
+                    }
+                })
+            } catch (error) {
+                console.error(error);
+            }
+        })
+
     })
 
-/* Timer code */
+    /* Timer code */
     var timer2 = "5:00";
     var interval = setInterval(function() {
 
@@ -212,5 +236,4 @@ function getQueAns (event) {
         $('.countdown').html(minutes + ':' + seconds);
         timer2 = minutes + ':' + seconds;
     }, 1000);
-
 </script>

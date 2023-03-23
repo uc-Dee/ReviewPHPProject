@@ -1,5 +1,4 @@
 
-
   <div class="container">
     <div class="container d-flex justify-content-center mt-4 flex-column align-items-center">
       <div class="d-flex mb-3" style="width: 800px">
@@ -27,7 +26,7 @@
         </div>
         <div class="d-flex flex-column align-items-center btn border rounded w-50 ms-3 mr-2"
           style="border-color: rgb(95, 150, 191) !important">
-          <p class="text-warning unuttempted_ques">11</p>
+          <p class="text-warning unuttempted_ques"></p>
           <h6>Unattempted</h6>
         </div>
       </div>
@@ -47,19 +46,38 @@
           <tr>
             <th scope="row">{$key+1}</th>
             <td>
-              <a href="#" class="w-100 text-decoration-none text-dark">{$ques_data.snippet}</a>
+              <a href="http://localhost/smarty/PHP_Project_with_Bootstrap/Template/explanation.php?que={$key}" class="w-100 text-decoration-none text-dark">{$ques_data.snippet}</a>
             </td>
             <td class="d-flex">
-            {assign var=anser value=json_decode(json_encode($ques_data['content_text']), true)}
-              {foreach from=$anser['answers'] key=key item=answer_data}
-              <p class="border d-flex justify-content-center align-items-center ms-2 text-dark rounded"
+            {assign var=answer value=json_decode($ques_data['content_text'])}
+            {assign var=answer_new value=json_decode(json_encode($answer), true)}
+              {foreach from=$answer_new['answers'] key=key item=answer_data}
+              <p class="border {if $answer_data.is_correct}bg-primary text-white{/if} d-flex justify-content-center align-items-center ms-2  rounded"
                 style="width: 24px; height: 24px">
                 {(65+$key)|chr}
               </p>
               {/foreach}
               
             </td>
-            <td><span>Unattempted</span></td>
+            <td>
+              <span class="ques_{$key+1}">
+              {assign var="val" value={$key+1}}
+                {if isset($user_ans.$val)}
+                    {foreach from=$answer_new['answers'] key=key item=answer_data}
+                      {if ($answer_data.is_correct) }
+                          {assign var="correct" value={(65+$key)|chr}}
+                      {/if}
+                    {/foreach}
+                    {if $user_ans.$val == $correct}
+                      <span class="text-success"><b>correct</b></span>
+                      {else}
+                        <span class="text-danger"><b>Incorrect</b></span>
+                    {/if}
+                  {else}
+                  <span class="text-dark"><b>Unattempted</b></span>
+                {/if}
+              </span>
+            </td>
           </tr>
         {/foreach}
         </tbody>

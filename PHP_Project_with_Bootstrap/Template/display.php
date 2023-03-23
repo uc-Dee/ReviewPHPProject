@@ -2,9 +2,9 @@
 
 // we include header.php to display the web page and its content
 include "header.php";
+session_start();
 
 //$smarty->auto_literal = false;
-error_reporting(E_ERROR | E_PARSE);
 // It will display the content of the json file
 // __ucd($_POST);
 // It will fetch the questions
@@ -13,6 +13,11 @@ if($_POST['func'] == 'get_ques_no') {
     $data = fetchQuestion($_POST['question_no']);
     // __ucd($data[1]);
     displaycontent($data[1]);
+}
+if($_POST['func'] == 'sessionData') {
+    
+    $_SESSION['answers'] = json_decode($_POST['answer_data'], true);
+    __ucd($_SESSION['answers']);
 }
 function fetchQuestion($question_no) {
     global $smarty;
@@ -23,8 +28,7 @@ function fetchQuestion($question_no) {
     $question = (json_decode($response[$question_no]['content_text']));
     $question = json_decode(json_encode($question), true);
     $smarty->assign('question',$question['question']);
-    $smarty->assign('que_no',$question_no
-);
+    $smarty->assign('que_no',$question_no);
     $smarty->assign('all_ques',$response);
     $smarty->assign('answers',$question['answers']);
     $HTML = $smarty->fetch('ques_ans.tpl');

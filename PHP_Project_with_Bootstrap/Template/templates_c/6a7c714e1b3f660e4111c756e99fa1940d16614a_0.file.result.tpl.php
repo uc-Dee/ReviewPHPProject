@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-21 06:11:32
+/* Smarty version 4.3.0, created on 2023-03-22 11:58:16
   from 'C:\xampp\htdocs\smarty\PHP_Project_with_Bootstrap\Template\result.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64193c848435a8_47451378',
+  'unifunc' => 'content_641adf4855e9e1_99371011',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a7c714e1b3f660e4111c756e99fa1940d16614a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\PHP_Project_with_Bootstrap\\Template\\result.tpl',
-      1 => 1679375489,
+      1 => 1679482694,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64193c848435a8_47451378 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641adf4855e9e1_99371011 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-
   <div class="container">
     <div class="container d-flex justify-content-center mt-4 flex-column align-items-center">
       <div class="d-flex mb-3" style="width: 800px">
@@ -50,7 +49,7 @@ function content_64193c848435a8_47451378 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="d-flex flex-column align-items-center btn border rounded w-50 ms-3 mr-2"
           style="border-color: rgb(95, 150, 191) !important">
-          <p class="text-warning unuttempted_ques">11</p>
+          <p class="text-warning unuttempted_ques"></p>
           <h6>Unattempted</h6>
         </div>
       </div>
@@ -75,20 +74,20 @@ $_smarty_tpl->tpl_vars['ques_data']->do_else = false;
             <th scope="row"><?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
 </th>
             <td>
-              <a href="#" class="w-100 text-decoration-none text-dark"><?php echo $_smarty_tpl->tpl_vars['ques_data']->value['snippet'];?>
+              <a href="http://localhost/smarty/PHP_Project_with_Bootstrap/Template/explanation.php?que=<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+" class="w-100 text-decoration-none text-dark"><?php echo $_smarty_tpl->tpl_vars['ques_data']->value['snippet'];?>
 </a>
             </td>
             <td class="d-flex">
-            <?php $_smarty_tpl->_assignInScope('anser', json_decode(json_encode($_smarty_tpl->tpl_vars['ques_data']->value['content_text']),true));?>
-            <?php echo print_r($_smarty_tpl->tpl_vars['anser']->value);?>
-
+            <?php $_smarty_tpl->_assignInScope('answer', json_decode($_smarty_tpl->tpl_vars['ques_data']->value['content_text']));?>
+            <?php $_smarty_tpl->_assignInScope('answer_new', json_decode(json_encode($_smarty_tpl->tpl_vars['answer']->value),true));?>
               <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['anser']->value['answers'], 'answer_data', false, 'key');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['answer_new']->value['answers'], 'answer_data', false, 'key');
 $_smarty_tpl->tpl_vars['answer_data']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['answer_data']->value) {
 $_smarty_tpl->tpl_vars['answer_data']->do_else = false;
 ?>
-              <p class="border d-flex justify-content-center align-items-center ms-2 text-dark rounded"
+              <p class="border <?php if ($_smarty_tpl->tpl_vars['answer_data']->value['is_correct']) {?>bg-primary text-white<?php }?> d-flex justify-content-center align-items-center ms-2  rounded"
                 style="width: 24px; height: 24px">
                 <?php echo chr((65+$_smarty_tpl->tpl_vars['key']->value));?>
 
@@ -98,7 +97,39 @@ $_smarty_tpl->tpl_vars['answer_data']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               
             </td>
-            <td><span>Unattempted</span></td>
+            <td>
+              <span class="ques_<?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
+">
+              <?php ob_start();
+echo $_smarty_tpl->tpl_vars['key']->value+1;
+$_prefixVariable1 = ob_get_clean();
+$_smarty_tpl->_assignInScope('val', $_prefixVariable1);?>
+                <?php if ((isset($_smarty_tpl->tpl_vars['user_ans']->value[$_smarty_tpl->tpl_vars['val']->value]))) {?>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['answer_new']->value['answers'], 'answer_data', false, 'key');
+$_smarty_tpl->tpl_vars['answer_data']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['answer_data']->value) {
+$_smarty_tpl->tpl_vars['answer_data']->do_else = false;
+?>
+                      <?php if (($_smarty_tpl->tpl_vars['answer_data']->value['is_correct'])) {?>
+                          <?php ob_start();
+echo chr((65+$_smarty_tpl->tpl_vars['key']->value));
+$_prefixVariable2 = ob_get_clean();
+$_smarty_tpl->_assignInScope('correct', $_prefixVariable2);?>
+                      <?php }?>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    <?php if ($_smarty_tpl->tpl_vars['user_ans']->value[$_smarty_tpl->tpl_vars['val']->value] == $_smarty_tpl->tpl_vars['correct']->value) {?>
+                      <span class="text-success"><b>correct</b></span>
+                      <?php } else { ?>
+                        <span class="text-danger"><b>Incorrect</b></span>
+                    <?php }?>
+                  <?php } else { ?>
+                  <span class="text-dark"><b>Unattempted</b></span>
+                <?php }?>
+              </span>
+            </td>
           </tr>
         <?php
 }

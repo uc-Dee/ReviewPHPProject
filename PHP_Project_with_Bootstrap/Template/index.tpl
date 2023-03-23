@@ -18,8 +18,8 @@
 
 <body>
     <nav class="navbar navbar-light bg-light" id="nav1">
-        <img src="../img/uCertifyLogo.png" width="30" height="30" class="d-inline-block align-top" alt="uCertify Logo"
-            id='img1'>
+        <a href='http://localhost/smarty/PHP_Project_with_Bootstrap/Template/'><img src="../img/uCertifyLogo.png" width="30" height="30" class="d-inline-block align-top" alt="uCertify Logo"
+        id='img1'></a>
         <p id="p1"><b>uCertify Test Prep</b></p>
     </nav>
     <hr id="hr1">

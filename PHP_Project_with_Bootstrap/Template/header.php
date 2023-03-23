@@ -1,7 +1,7 @@
 <?php
 
 // In this header file we are trying to display the web page and its content
-
+error_reporting(E_ERROR | E_PARSE);
 // assigns the path of the parent of the parent directory of the current dir to the variable $DIR
 $DIR = dirname(dirname(__DIR__));
 require $DIR.'/libs/Smarty.class.php';
