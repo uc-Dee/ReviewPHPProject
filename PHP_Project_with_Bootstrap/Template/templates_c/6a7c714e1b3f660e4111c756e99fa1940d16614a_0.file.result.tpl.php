@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-23 09:54:10
+/* Smarty version 4.3.0, created on 2023-03-27 08:54:16
   from 'C:\xampp\htdocs\smarty\PHP_Project_with_Bootstrap\Template\result.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641c13b273c154_35543539',
+  'unifunc' => 'content_64213d98418233_29404610',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a7c714e1b3f660e4111c756e99fa1940d16614a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\PHP_Project_with_Bootstrap\\Template\\result.tpl',
-      1 => 1679561514,
+      1 => 1679900037,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641c13b273c154_35543539 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64213d98418233_29404610 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
   <div class="container">
     <div class="container d-flex justify-content-center mt-5 flex-column align-items-center">
@@ -60,7 +60,7 @@ function content_641c13b273c154_35543539 (Smarty_Internal_Template $_smarty_tpl)
             <th scope="col">No.</th>
             <th scope="col">Question</th>
             <th scope="col">Option</th>
-            <th scope="col">Result</th>
+            <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody>

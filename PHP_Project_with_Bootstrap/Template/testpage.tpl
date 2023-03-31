@@ -104,18 +104,17 @@
 
 
 {* To display the buttons *}
-<div class="fixed-bottom mb-3">
+<div class="fixed-bottom mb-3 ">
     <div class=" d-flex justify-content-end container mr-1">
         <button class="countdown bg-transparent border-0 font-weight-bold mr-1" id='timer'></button>
-        <button type="button" class="  btn btn-md-3 btn-outline-primary px-4 slide-toggle me-2 mr-1"
+        <button type="button" class="btn btn-md-3 btn-outline-primary px-4 slide-toggle me-2 mr-1"
             id='list'>List</button>
         <button type="button" {if $disable_pre}disabled {/if} class="btn btn-md-3 btn-outline-dark pre_btn mr-1"
             id="prev">Previous</button>
-        <div class='text-center'>
-            <span class="no_of_que font-weight-bold mr-1 ml-3" >1</span>of<span
-                 class='font-weight-bold mr-1 ml-1'>11</span>
+        <div class='text-center mt-1'>
+            <span class="no_of_que font-weight-bold ml-1" >1</span> of <span
+                 class='font-weight-bold mr-2'>11</span>
         </div>
-        <button class="btn " id="page"></button>
         <button type="button" class=" btn btn-md-3 btn-outline-dark px-4 me-2 mr-2" id="next">Next</button>
         <button type="button" class="end-test btn btn-md-3 btn-danger px-3 me-2" data-toggle="modal"
             data-target=".bd-example-modal-lg" onclick="">End Test

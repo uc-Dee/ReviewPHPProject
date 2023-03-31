@@ -38,7 +38,7 @@
             <th scope="col">No.</th>
             <th scope="col">Question</th>
             <th scope="col">Option</th>
-            <th scope="col">Result</th>
+            <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody>

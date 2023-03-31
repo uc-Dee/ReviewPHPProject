@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-23 18:38:33
+/* Smarty version 4.3.0, created on 2023-03-27 09:56:05
   from 'C:\xampp\htdocs\smarty\PHP_Project_with_Bootstrap\Template\testpage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641c8e99ed14b3_12488463',
+  'unifunc' => 'content_64214c157da979_20903328',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dd8237c0b3858c9d8356a5228ff69b38fb1116c8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\PHP_Project_with_Bootstrap\\Template\\testpage.tpl',
-      1 => 1679593112,
+      1 => 1679900433,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641c8e99ed14b3_12488463 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64214c157da979_20903328 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"><?php echo '</script'; ?>
@@ -145,18 +145,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 
 
-<div class="fixed-bottom mb-3">
+<div class="fixed-bottom mb-3 ">
     <div class=" d-flex justify-content-end container mr-1">
         <button class="countdown bg-transparent border-0 font-weight-bold mr-1" id='timer'></button>
-        <button type="button" class="  btn btn-md-3 btn-outline-primary px-4 slide-toggle me-2 mr-1"
+        <button type="button" class="btn btn-md-3 btn-outline-primary px-4 slide-toggle me-2 mr-1"
             id='list'>List</button>
         <button type="button" <?php if ($_smarty_tpl->tpl_vars['disable_pre']->value) {?>disabled <?php }?> class="btn btn-md-3 btn-outline-dark pre_btn mr-1"
             id="prev">Previous</button>
-        <div class='text-center'>
-            <span class="no_of_que font-weight-bold mr-1 ml-3" >1</span>of<span
-                 class='font-weight-bold mr-1 ml-1'>11</span>
+        <div class='text-center mt-1'>
+            <span class="no_of_que font-weight-bold ml-1" >1</span> of <span
+                 class='font-weight-bold mr-2'>11</span>
         </div>
-        <button class="btn " id="page"></button>
         <button type="button" class=" btn btn-md-3 btn-outline-dark px-4 me-2 mr-2" id="next">Next</button>
         <button type="button" class="end-test btn btn-md-3 btn-danger px-3 me-2" data-toggle="modal"
             data-target=".bd-example-modal-lg" onclick="">End Test

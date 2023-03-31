@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-23 13:11:24
+/* Smarty version 4.3.0, created on 2023-03-27 08:49:43
   from 'C:\xampp\htdocs\smarty\PHP_Project_with_Bootstrap\Template\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641c41ec824d10_48278536',
+  'unifunc' => 'content_64213c87d67c15_56094934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53c1007c6eeb70be9ebca384caa034b4db747456' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\PHP_Project_with_Bootstrap\\Template\\index.tpl',
-      1 => 1679564697,
+      1 => 1679899726,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641c41ec824d10_48278536 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64213c87d67c15_56094934 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +50,7 @@ function content_641c41ec824d10_48278536 (Smarty_Internal_Template $_smarty_tpl)
         <div class="row">
             <div class="col-2">
                 <a href="http://localhost/smarty/PHP_Project_with_Bootstrap/Template/"><img src="uCertifyLogo.png"
-                        class="img1" width="150" height="40" alt=""></a>
+                        class="img1" width="150" height="40" alt="uCertify Logo"></a>
             </div>
             <div class="col-8">
                 <h2 class="text-center">uCertify Test Prep</h2>
