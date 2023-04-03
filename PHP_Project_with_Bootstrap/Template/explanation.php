@@ -12,17 +12,17 @@ parse_str($query_string, $queries);
 $response = json_decode(file_get_contents('question.json'));
 $response = json_decode(json_encode($response), true);
 // __ucd($queries);
+// __ucd($response);
+
+// It means that ki responses ke question number vale index par jakar values ko fetch karo
 $question = (json_decode($response[$queries['que']]['content_text']));
 $question = json_decode(json_encode($question), true);
 // __ucd($question);
-// __ucd($question['answers']);
+// __ucd($question['answers']); 
 $smarty->assign('answer', $question['answers']);
 $smarty->assign('question_num',$queries['que']);
 $smarty->assign('question', $question['question']);
-$smarty->assign('option1', $question['answers'][0]['answer']);
-$smarty->assign('option2', $question['answers'][1]['answer']);
-$smarty->assign('option3', $question['answers'][2]['answer']);
-$smarty->assign('option4', $question['answers'][3]['answer']);
 $smarty->assign('explanation', $question['explanation']);
 
 web_showpage($smarty->fetch('explanation.tpl'));
+?>

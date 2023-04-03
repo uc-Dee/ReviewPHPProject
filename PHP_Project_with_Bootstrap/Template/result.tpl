@@ -1,4 +1,3 @@
-
   <div class="container">
     <div class="container d-flex justify-content-center mt-5 flex-column align-items-center">
       <div class="d-flex mb-3" style="width: 800px">
@@ -6,7 +5,7 @@
               background-color: rgb(227, 227, 227) !important;
               border-color: rgb(186, 186, 186) !important;
             ">
-          <p style="color: indigo">0%</p>
+          <p style="color: indigo">{$result}%</p>
           <h6>Result</h6>
         </div>
         <div class="d-flex flex-column align-items-center btn border rounded w-50 ms-3 mr-2"
@@ -16,17 +15,17 @@
         </div>
         <div class="d-flex flex-column align-items-center btn border rounded w-50 ms-3 mr-2"
           style="border-color: rgb(95, 150, 191) !important">
-          <p class="text-success">0</p>
+          <p class="text-success">{$total_correct}</p>
           <h6>Correct</h6>
         </div>
         <div class="d-flex flex-column align-items-center btn border rounded w-50 ms-3 mr-2"
           style="border-color: rgb(95, 150, 191) !important">
-          <p class="text-danger">0</p>
+          <p class="text-danger">{$total_incorrect}</p>
           <h6>Incorrect</h6>
         </div>
         <div class="d-flex flex-column align-items-center btn border rounded w-50 ms-3 mr-2"
           style="border-color: rgb(95, 150, 191) !important">
-          <p class="text-warning unuttempted_ques"></p>
+          <p class="text-warning unuttempted_ques">{$unattempted}</p>
           <h6>Unattempted</h6>
         </div>
       </div>
@@ -52,10 +51,10 @@
             {assign var=answer value=json_decode($ques_data['content_text'])}
             {assign var=answer_new value=json_decode(json_encode($answer), true)}
               {foreach from=$answer_new['answers'] key=key item=answer_data}
-              <p class="border {if $answer_data.is_correct}bg-primary text-white{/if} d-flex justify-content-center align-items-center ms-2  rounded"
-                style="width: 24px; height: 24px">
-                {(65+$key)|chr}
-              </p>
+                <p class="border {if $answer_data.is_correct}bg-primary text-white{/if} d-flex justify-content-center align-items-center ms-2  rounded"
+                  style="width: 24px; height: 24px">
+                  {(65+$key)|chr}
+                </p>
               {/foreach}
               
             </td>

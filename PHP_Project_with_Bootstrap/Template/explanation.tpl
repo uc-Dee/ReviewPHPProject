@@ -2,48 +2,42 @@
 {* key is not displaying  *}
 <div class='container mt-5'>
     <div id='displayQuestion'><b>{$question_num+1}. {$question}</b></div>
-    <div>
-        <div class="form-check py-2 mt-2">
-        <b>{(65)|chr}</b>
-            <input type="radio" class="form-check-input first " name="myRadio" id="radio1">
-            <label for="radio1"
-                class="form-check-label answer_input {if $answer[0]['is_correct'].is_correct}text-success font-weight-bold {/if}"
-                id='displayOption1'>{$option1}</i></label>
-            </label>
-        </div>
-        <div class="form-check py-2">
-        {(66)|chr}
-            <input type="radio" class="form-check-input second" name="myRadio" id="radio2">
-            <label for="radio2"
-                class="form-check-label answer_input {if $answer[1]['is_correct'].is_correct}text-success font-weight-bold{/if}"
-                id='displayOption2'>{$option2}</label>
-            </label>
-        </div>
-        <div class="form-check py-2">
-        {(67)|chr}
-            <input type="radio" class="form-check-input third" name="myRadio" id="radio3">
-            <label for="radio3"
-                class="form-check-label answer_input {if $answer[2]['is_correct'].is_correct}text-success font-weight-bold {/if}"
-                id='displayOption3'>{$option3}</label>
-            </label>
-        </div>
-        <div class="form-check py-2">
-        {(68)|chr}
-            <input type="radio" class="form-check-input forth" name="myRadio" id="radio4">
-            <label for="radio4"
-                class="form-check-label answer_input {if $answer[3]['is_correct'].is_correct}text-success font-weight-bold {/if}"
-                id='displayOption4'>{$option4}</label>
-            </label>
-        </div>
 
-        <div class="form-check py-2 pt-5 mt-2">
-            <hr>
-            <p class="form-check-label answer_input" id='displayOption4'>{$explanation}</p>
-        </div>
-    </div>
+    {foreach from=$answer key=key item=answer_data}
+                <div class="form-check  mt-2">
+                    <span class='mr-4'><b>{(65+$key)|chr}</b></span>
+                    <input type="radio" class="form-check-input first " name="myRadio" id="radio1">
+                    <label for="radio1"
+                        class="form-check-label answer_input {if $answer_data['is_correct'].is_correct}text-success font-weight-bold {/if}"
+                        id='displayOption1'>{$answer_data['answer']}</i></label>
+                    </label>
+                </div>  
+    {/foreach}
+    <div class='mt-5'><span><b>Explanation: </b></span>{$explanation}</div> 
 </div>
+
+{foreach from=$response_ques key=key item=ques_data}
+        <span class="ques_{$key+1}">
+        {assign var="val" value={$key+1}}
+          {if isset($user_ans.$val)}
+              {foreach from=$answers key=key item=answer_data}
+                {if ($answer_data['is_correct'].is_correct) }
+                    {assign var="correct" value={(65+$key)|chr}}
+                {/if}
+              {/foreach}
+              {if $user_ans.$val == $correct}
+                <span class="alert alert-success">correct</span>
+                {else}
+                  <span class="alert alert-danger">Incorrect</span>
+              {/if}
+            {else}
+            <span class="alert alert-warning">Unattempted</span>
+          {/if}
+        </span>
+  {/foreach}
 
 <div class="fixed-bottom bg-light rounded border py-2 ml-auto border border-secondary d-flex justify-content-center"
     style="z-index: 10; bottom:10px; width:15%">
     <a class="btn-danger btn mx-3 px-4 " id="home" href="result.php">Result Page</a>
 </div>
+
