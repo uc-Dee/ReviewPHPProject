@@ -4,21 +4,16 @@ include $DIR."/header.php";
 global $smarty;
 session_start();
 
-// The array of answers that we stored on the session
-// __ucd($_SESSION);
 $response = json_decode(file_get_contents('question.json'));
 $response = json_decode(json_encode($response), true);
 
-// it contains the entire array with all the indexes
 $total_correct = 0;
 $total_incorrect = 0;
 $res_new = json_decode($response[0]['content_text']);
 $response_ans = json_decode(json_encode($res_new), true);
 $user_ans = $_SESSION['answers'];
-// __ucd($user_ans);
 $correct = '';
 
-// This response_ans contains both the questions and the answers. 
 foreach($response as $key => $res_data) {
     if($user_ans[$key+1]) {
         $answer_new = json_decode(json_encode($res_data), true);
@@ -38,7 +33,6 @@ foreach($response as $key => $res_data) {
 }
 
 $result = number_format((($total_correct/sizeof($response))*100), 2);
-// __ucd($response[0]['content_text']['answers']); 
 $smarty->assign('response_ques',$response);
 $smarty->assign('total_correct',$total_correct);
 $smarty->assign('total_incorrect',$total_incorrect);

@@ -13,7 +13,7 @@
     }
 </style>
 
-{* key is not displaying  *}
+{* alert *}
 {assign var="val" value={$question_num+1}}
 {if isset($user_ans.$val)}
     {foreach from=$answer key=key item=answer_data}
@@ -42,64 +42,9 @@
     </div>
 {/if}
 
-
+{* questions and options *}
 <div class='container mt-5'>
     <div id='displayQuestion'><b>{$question_num+1}. {$question}</b></div>
-
-    {* {foreach from=$answer key=key item=answer_data}
-                <div class="form-check  mt-2">
-                    <span class='mr-4'><b>{(65+$key)|chr}</b></span>
-                    <input type="radio" class="form-check-input first " name="myRadio" id="radio1">
-
-
-        {if ($answer_data.is_correct) }
-
-
-            {assign var="correct" value={(65+$key)|chr}}
-
-
-        {/if}
-
-
-        {if isset($user_ans.$val)}
-
-
-
-            {if $user_ans.$val==$correct}
-                                            <label for="radio1" class="form-check-label answer_input 
-
-
-                {if $answer_data['is_correct'].is_correct}text-success font-weight-bold 
-
-
-                {/if}" id='displayOption1'>{$answer_data['answer']}</i></label>
-                                            </label>
-
-
-            {else}
-
-
-            {/if}
-
-
-
-        {else}
-                                <label for="radio1" class="form-check-label answer_input 
-
-
-            {if $answer_data['is_correct'].is_correct}text-success font-weight-bold 
-
-
-            {/if}" id='displayOption1'>{$answer_data['answer']}</i></label>
-                                </label>
-
-
-        {/if}
-
-
-    {/foreach}
- *}
-
     {foreach from=$answer key=key item=answer_data}
         <div class="form-check  mt-2">
             <span class='mr-4'><b>{(65+$key)|chr}</b></span>
@@ -113,6 +58,7 @@
     <div class='mt-4'><span><b>Explanation: </b></span>{$explanation}</div>
 </div>
 
+{* result *}
 <div class="fixed-bottom bg-light rounded border py-2 ml-auto border border-secondary d-flex justify-content-center"
     style="z-index: 10; bottom:10px; width:15%">
     <a class="btn-danger btn mx-3 px-4 " id="home" href="result.php">Result Page</a>
