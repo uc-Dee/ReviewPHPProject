@@ -30,6 +30,8 @@
         </div>
       </div>
 
+      {* {sizeof($response_ques)}
+      {sizeof($user_ans)} *}
       {* This is the layout of the table *}
       <table class="table table-striped table-hover">
         <thead>
@@ -60,21 +62,28 @@
             </td>
             <td>
               <span class="ques_{$key+1}">
+              
               {assign var="val" value={$key+1}}
+
                 {if isset($user_ans.$val)}
+
+
                     {foreach from=$answer_new['answers'] key=key item=answer_data}
                       {if ($answer_data.is_correct) }
                           {assign var="correct" value={(65+$key)|chr}}
                       {/if}
                     {/foreach}
+
                     {if $user_ans.$val == $correct}
                       <span class="badge badge-success">correct</span>
                       {else}
                         <span class="badge badge-danger">Incorrect</span>
                     {/if}
+
                   {else}
                   <span class="badge badge-warning">Unattempted</span>
                 {/if}
+
               </span>
             </td>
           </tr>

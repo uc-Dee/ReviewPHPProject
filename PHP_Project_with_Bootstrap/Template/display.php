@@ -2,8 +2,6 @@
 
 // we include header.php to display the web page and its content
 include "header.php";
-session_unset();
-session_destroy();
 session_start();
 
 //$smarty->auto_literal = false;

@@ -17,7 +17,7 @@
     }
 
     .local-navbar {
-        /* background-color: #191E38; */
+        background-color: #191E38;
         border-radius: 0 .25rem .25rem 0;
         display: flex;
         flex-direction: column;
