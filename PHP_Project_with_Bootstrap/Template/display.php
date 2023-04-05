@@ -17,7 +17,6 @@ if($_POST['func'] == 'get_ques_no') {
 if($_POST['func'] == 'sessionData') {
     
     $_SESSION['answers'] = json_decode($_POST['answer_data'], true);
-    __ucd($_SESSION['answers']);
 }
 function fetchQuestion($question_no) {
     global $smarty;

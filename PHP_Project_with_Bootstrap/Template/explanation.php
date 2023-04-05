@@ -25,6 +25,7 @@ $user_ans = $_SESSION['answers'];
 $smarty->assign('user_ans', $user_ans); 
 // __ucd($user_ans);    
 // $smarty->assign('question', $question);
+// __ucd($question['answers']);
 $smarty->assign('answer', $question['answers']);
 $smarty->assign('question_num',$queries['que']);
 $smarty->assign('question', $question['question']);

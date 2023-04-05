@@ -46,14 +46,44 @@
 <div class='container mt-5'>
     <div id='displayQuestion'><b>{$question_num+1}. {$question}</b></div>
     {foreach from=$answer key=key item=answer_data}
-        <div class="form-check  mt-2">
-            <span class='mr-4'><b>{(65+$key)|chr}</b></span>
-            <input type="radio" class="form-check-input first " name="myRadio" id="radio1">
+        <span class='mr-4'><b>{(65+$key)|chr}</b></span>
+        {assign var='num_incorrect' value=(ord($user_ans.$val)-65)}
+        {assign var='num_correct' value=(ord($correct)-65)}
+
+        {* This is to put the bullets for the options  *}
+        <input type="radio" class="form-check-input first " name="myRadio" id="radio1">
+        {if ($answer_data.is_correct) }
+            {assign var="correct" value={(65+$key)|chr}}
+        {/if}
+        {if isset($user_ans.$val)}
+            {if $user_ans.$val==$correct}
+                <label for="radio1" class="form-check-label answer_input 
+                    {if $answer_data['is_correct'].is_correct}text-success font-weight-bold 
+                    {/if}" id='displayOption1'>{$answer_data['answer']}</i></label>
+                </label></br>
+
+            {else}
+
+                {if $num_correct == $key}
+                    <label for="radio1" class="form-check-label answer_input text-success font-weight-bold" id='displayOption1'>
+                        {$answer_data['answer']}
+                    </label></br>
+                {else if $key == $num_incorrect}
+                    <label for="radio1" class="form-check-label answer_input text-danger font-weight-bold" id='displayOption1'>
+                        {$answer_data['answer']}
+                    </label></br>
+                {else}
+                    <label for="radio1" class="form-check-label answer_input" id='displayOption1'>
+                        {$answer_data['answer']}
+                    </label></br>
+                {/if}
+            {/if}
+        {else}
             <label for="radio1" class="form-check-label answer_input 
-            {if $answer_data['is_correct'].is_correct}text-success font-weight-bold 
-            {/if}" id='displayOption1'>{$answer_data['answer']}</i></label>
-            </label>
-        </div>
+                {if $answer_data['is_correct'].is_correct}text-success font-weight-bold 
+                {/if}" id='displayOption1'>{$answer_data['answer']}</i></label>
+            </label></br>
+        {/if}
     {/foreach}
     <div class='mt-4'><span><b>Explanation: </b></span>{$explanation}</div>
 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-04-04 19:47:27
+/* Smarty version 4.3.0, created on 2023-04-05 06:59:10
   from 'C:\xampp\htdocs\smarty\FinalPHPProject\template\testpage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642c62af015163_15341645',
+  'unifunc' => 'content_642d001e7d6311_97866190',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '780d84bf911f53c4cacba7ba4cb04b465a7cbcfa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\FinalPHPProject\\template\\testpage.tpl',
-      1 => 1680630435,
+      1 => 1680630477,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_642c62af015163_15341645 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642d001e7d6311_97866190 (Smarty_Internal_Template $_smarty_tpl) {
 ?><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"><?php echo '</script'; ?>
